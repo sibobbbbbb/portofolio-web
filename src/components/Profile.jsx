@@ -1,4 +1,5 @@
 import profilePict from "../assets/profile.jpg";
+import CV from "../../public/CV.pdf";
 import { HERO_CONTENT } from "../constants";
 
 const Profile = () => {
@@ -26,7 +27,7 @@ const Profile = () => {
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-justify">
               {HERO_CONTENT}               
             </p>
-            <a href="/CV.pdf" download rel="noopener noreferrer" className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10">
+            <a href={CV} download rel="noopener noreferrer" target="_blank" className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10">
               <b>Download CV</b>
             </a>
           </div>
