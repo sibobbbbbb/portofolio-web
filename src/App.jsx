@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
+import TechStack from "./components/TechStack";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <div className="container mx-auto px-8">
         <Navbar />
         <Profile />
+        <TechStack />
       </div>
     </div>
   );
