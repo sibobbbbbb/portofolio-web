@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Navbar />
         <Profile />
         <TechStack />
+        <Projects />
       </div>
     </div>
   );
