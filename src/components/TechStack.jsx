@@ -1,4 +1,4 @@
-import { FaJava, FaNodeJs, FaPython, FaCode } from "react-icons/fa";
+import { FaJava, FaNodeJs, FaPython } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import {
   SiMongodb,
@@ -24,13 +24,10 @@ const TechStack = () => {
             Teknologi yang digunakan untuk membangun website frontend dan
             backend.
           </p>
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center flex-wrap gap-4 mt-6">
             <SiHtml5 className="text-7xl text-orange-500" title="HTML" />
             <SiCss3 className="text-7xl text-blue-600" title="CSS" />
-            <SiJavascript
-              className="text-7xl text-yellow-500"
-              title="Javascript"
-            />
+            <SiJavascript className="text-7xl text-yellow-500" title="Javascript" />
             <FaNodeJs className="text-7xl text-green-500" title="NodeJs" />
             <RiReactjsLine className="text-7xl text-cyan-400" title="React" />
             <SiMongodb className="text-7xl text-green-400" title="MongoDb" />
@@ -52,8 +49,9 @@ const TechStack = () => {
             <FaPython className="text-7xl text-blue-500" title="Python" />
             <FaJava className="text-7xl text-red-600" title="Java" />
             <img
-              src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg "
-              className="text-7xl text-blue-500"
+              src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg"
+              className="text-7xl"
+              alt="C#"
               title="C#"
               width={70}
             />
@@ -66,11 +64,10 @@ const TechStack = () => {
             Mobile Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            Teknologi untuk membangun aplikasi mobile native atau
-            cross-platform.
+            Teknologi untuk membangun aplikasi mobile native atau cross-platform.
           </p>
           <div className="flex justify-center gap-4 mt-6">
-            <SiFlutter className="text-7xl text-blue-400" width={60} />
+            <SiFlutter className="text-7xl text-blue-400" title="Flutter" />
           </div>
         </div>
       </div>
