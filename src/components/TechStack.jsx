@@ -9,11 +9,32 @@ import {
   SiCss3,
   SiJavascript,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+
+const iconVariants = (duration) => ({
+  initial: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
+    },
+  },
+});
 
 const TechStack = () => {
   return (
     <div className="pb-24">
-      <h2 className="my-20 text-center text-4xl">Tech Stack</h2>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="my-20 text-center text-4xl"
+      >
+        Tech Stack
+      </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Web Development */}
         <div className="border p-6 rounded-lg shadow-lg">
@@ -24,16 +45,21 @@ const TechStack = () => {
             Teknologi yang digunakan untuk membangun website frontend dan
             backend.
           </p>
-          <div className="flex justify-center flex-wrap gap-4 mt-6">
-            <SiHtml5 className="text-7xl text-orange-500" title="HTML" />
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1.5 }}
+            className="flex justify-center flex-wrap gap-4 mt-6"
+          >
+            <SiHtml5 className="text-7xl text-orange-500" title="HTML"/>
             <SiCss3 className="text-7xl text-blue-600" title="CSS" />
-            <SiJavascript className="text-7xl text-yellow-500" title="Javascript" />
+            <SiJavascript className="text-7xl text-yellow-500" title="Javascript"/>
             <FaNodeJs className="text-7xl text-green-500" title="NodeJs" />
             <RiReactjsLine className="text-7xl text-cyan-400" title="React" />
             <SiMongodb className="text-7xl text-green-400" title="MongoDb" />
             <SiSqlite className="text-7xl text-blue-600" title="Sqlite" />
             <SiDocker className="text-7xl text-blue-500" title="Docker" />
-          </div>
+          </motion.div>
         </div>
 
         {/* Software Development */}
@@ -45,7 +71,12 @@ const TechStack = () => {
             Tools dan framework untuk mengembangkan aplikasi desktop dan
             backend.
           </p>
-          <div className="flex justify-center gap-4 mt-6">
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1.5 }}
+            className="flex justify-center gap-4 mt-6"
+          >
             <FaPython className="text-7xl text-blue-500" title="Python" />
             <FaJava className="text-7xl text-red-600" title="Java" />
             <img
@@ -55,7 +86,7 @@ const TechStack = () => {
               title="C#"
               width={70}
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Mobile Development */}
@@ -64,11 +95,17 @@ const TechStack = () => {
             Mobile Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            Teknologi untuk membangun aplikasi mobile native atau cross-platform.
+            Teknologi untuk membangun aplikasi mobile native atau
+            cross-platform.
           </p>
-          <div className="flex justify-center gap-4 mt-6">
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1.5 }}
+            className="flex justify-center gap-4 mt-6"
+          >
             <SiFlutter className="text-7xl text-blue-400" title="Flutter" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
