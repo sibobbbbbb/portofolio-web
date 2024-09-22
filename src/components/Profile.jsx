@@ -27,7 +27,7 @@ const Profile = () => {
             <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-justify">
               {HERO_CONTENT}               
             </p>
-            <a href={resume} download rel="noopener noreferrer" target="_blank" className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10">
+            <a href={resume} download rel="noopener noreferrer" target="_blank" className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-slate-600 hover:text-white">
               <b>Download Resume</b>
             </a>
           </div>
