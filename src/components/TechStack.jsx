@@ -10,23 +10,11 @@ import {
   SiJavascript,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
+import { FaGolang } from "react-icons/fa6";
 
 const TechStack = () => {
   return (
-    <div className="pb-24">
+    <div className="pb-16">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -42,8 +30,7 @@ const TechStack = () => {
             Web Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            Teknologi yang digunakan untuk membangun website frontend dan
-            backend.
+            The technology used to build frontend and backend websites.
           </p>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -51,10 +38,14 @@ const TechStack = () => {
             transition={{ duration: 1.5 }}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
-            <SiHtml5 className="text-7xl text-orange-500" title="HTML"/>
+            <SiHtml5 className="text-7xl text-orange-500" title="HTML" />
             <SiCss3 className="text-7xl text-blue-600" title="CSS" />
-            <SiJavascript className="text-7xl text-yellow-500" title="Javascript"/>
+            <SiJavascript
+              className="text-7xl text-yellow-500"
+              title="Javascript"
+            />
             <FaNodeJs className="text-7xl text-green-500" title="NodeJs" />
+            <FaGolang className="text-7xl text-blue-500" title="Golang" />
             <RiReactjsLine className="text-7xl text-cyan-400" title="React" />
             <SiMongodb className="text-7xl text-green-400" title="MongoDb" />
             <SiSqlite className="text-7xl text-blue-600" title="Sqlite" />
@@ -68,8 +59,8 @@ const TechStack = () => {
             Software Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            Tools dan framework untuk mengembangkan aplikasi desktop dan
-            backend.
+            Tools and frameworks for developing desktop and backend
+            applications.
           </p>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,8 +86,7 @@ const TechStack = () => {
             Mobile Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            Teknologi untuk membangun aplikasi mobile native atau
-            cross-platform.
+            Technologies for building mobile applications
           </p>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
