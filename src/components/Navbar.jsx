@@ -9,30 +9,60 @@ const Navbar = () => {
           <img className="rounded-full" src={logo} alt="Logo" width={70}></img>
         </a>
       </div>
+
+      {/* Navigation Links */}
+      <div className="flex gap-8">
+        <a
+          href="#profile"
+          className="hover:text-cyan-400 transition duration-300"
+        >
+          Profile
+        </a>
+        <a
+          href="#techstack"
+          className="hover:text-cyan-400 transition duration-300"
+        >
+          Tech Stack
+        </a>
+        <a
+          href="#projects"
+          className="hover:text-cyan-400 transition duration-300"
+        >
+          Projects
+        </a>
+        <a
+          href="#contact"
+          className="hover:text-cyan-400 transition duration-300"
+        >
+          Contact
+        </a>
+      </div>
+
+      {/* Social Media Icons */}
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
           href="https://www.linkedin.com/in/farhan-raditya-aji/"
           target="_blank"
           rel="noopener noreferrer"
-          arial-label="LinkedIn"
+          aria-label="LinkedIn"
         >
-            <FaLinkedin />
+          <FaLinkedin />
         </a>
         <a
           href="http://www.github.com/sibobbbbbb/"
           target="_blank"
           rel="noopener noreferrer"
-          arial-label="Github"
+          aria-label="Github"
         >
-            <FaGithub/>
+          <FaGithub />
         </a>
         <a
           href="http://www.instagram.com/farhan.raditya29"
           target="_blank"
           rel="noopener noreferrer"
-          arial-label="Instagram"
+          aria-label="Instagram"
         >
-            <FaInstagram />
+          <FaInstagram />
         </a>
       </div>
     </nav>

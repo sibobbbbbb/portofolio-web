@@ -17,10 +17,18 @@ export default function App() {
       </div>
       <div className="container mx-auto px-8">
         <Navbar />
-        <Profile />
-        <TechStack />
-        <Projects />
-        <Contact />
+        <section id="profile">
+          <Profile />
+        </section>
+        <section id="techstack" className="pt-10">
+          <TechStack />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </div>
   );
