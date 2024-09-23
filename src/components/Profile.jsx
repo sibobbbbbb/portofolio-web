@@ -1,7 +1,7 @@
 import profilePict from "../assets/profile.jpg";
-import resume from "../../public/resume.pdf";
+import resume from "../assets/resume.pdf";
 import { HERO_CONTENT } from "../constants";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {
