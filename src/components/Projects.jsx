@@ -46,8 +46,8 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   className="rounded mb-6"
-                  width={250}
-                  height={250}
+                  width={270}
+                  height={270}
                 />
               </motion.div>
 
