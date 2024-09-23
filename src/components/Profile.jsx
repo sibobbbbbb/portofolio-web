@@ -1,5 +1,4 @@
 import profilePict from "../assets/profile.jpg";
-import resume from "../assets/resume.pdf";
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -68,7 +67,7 @@ const Profile = () => {
             </motion.p>
             <motion.a
               variants={childVariants}
-              href={resume}
+              href="/src/assets/Resume.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"
