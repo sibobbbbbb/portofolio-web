@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-16 lg:py-24">
+    <div className="flex justify-center items-center py-14 ">
       <div className="w-full max-w-4xl rounded-lg shadow-lg p-8 lg:p-12 text-stone border">
         <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
 
