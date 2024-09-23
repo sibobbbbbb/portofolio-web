@@ -22,7 +22,6 @@ const Projects = () => {
     <div className="p-28">
       <h2 className="my-20 text-center text-4xl">Projects</h2>
 
-      {/* Swiper */}
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -37,7 +36,6 @@ const Projects = () => {
         {PROJECTS.map((project, index) => (
           <SwiperSlide key={index}>
             <div className="mb-8 flex flex-wrap lg:justify-center">
-              {/* Motion for Image */}
               <motion.div
                 className="w-full lg:w-1/4"
                 initial="hidden"
@@ -53,7 +51,6 @@ const Projects = () => {
                 />
               </motion.div>
 
-              {/* Motion for Content */}
               <motion.div
                 className="w-full max-w-xl lg:w-3/4"
                 initial="hidden"
@@ -64,7 +61,6 @@ const Projects = () => {
                 <p className="text-justify text-stone-400 mb-4">
                   {project.description}
                 </p>
-                {/* Technologies */}
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
@@ -74,16 +70,15 @@ const Projects = () => {
                   </span>
                 ))}
 
-                {/* View on Github Button */}
                 <div className="pt-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center gap-2 bg-gray-900 text-white font-bold rounded-full px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-700 hover:shadow-lg"
+                    className="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold rounded-full px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600 hover:shadow-lg"
                     style={{ width: "fit-content" }}
                   >
-                    <FaGithub className="mr-2" /> {/* Icon with space */}
+                    <FaGithub className="mr-2" />
                     View on Github
                   </a>
                 </div>
