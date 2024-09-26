@@ -22,7 +22,7 @@ export const PROJECTS = [
     image: project2,
     description:
       "Notes App is a simple mobile application for users to create, view, edit, and delete notes. It integrates with Firebase Authentication to allow users to sign in using their Google account. The app also stores notes locally on the device using Hive, a lightweight and fast local database.",
-    technologies: ["Dart", "Flutter", "Firebase"],
+    technologies: ["Dart", "Flutter", "Firebase", "Hive"],
     github: "https://github.com/sibobbbbbb/notes_app",
   },
   {
