@@ -10,34 +10,6 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Navigation Links */}
-      <div className="flex gap-8">
-        <a
-          href="#profile"
-          className="hover:text-cyan-400 transition duration-300"
-        >
-          Profile
-        </a>
-        <a
-          href="#techstack"
-          className="hover:text-cyan-400 transition duration-300"
-        >
-          Tech Stack
-        </a>
-        <a
-          href="#projects"
-          className="hover:text-cyan-400 transition duration-300"
-        >
-          Projects
-        </a>
-        <a
-          href="#contact"
-          className="hover:text-cyan-400 transition duration-300"
-        >
-          Contact
-        </a>
-      </div>
-
       {/* Social Media Icons */}
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
