@@ -43,17 +43,50 @@ const TechStack = () => {
             transition={{ duration: 1.5 }}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
-            <SiHtml5 className="text-7xl text-orange-500" title="HTML" />
-            <SiCss3 className="text-7xl text-blue-600" title="CSS" />
-            <SiJavascript className="text-7xl text-yellow-500" title="Javascript"/>
-            <SiTailwindcss className="text-7xl text-cyan-500" title="Tailwind" />
-            <FaNodeJs className="text-7xl text-green-500" title="NodeJs" />
-            <SiExpress className="text-7xl text-green-500" title="Express" />
-            <FaGolang className="text-7xl text-blue-500" title="Golang" />
-            <RiReactjsLine className="text-7xl text-cyan-400" title="React" />
-            <SiMongodb className="text-7xl text-green-400" title="MongoDb" />
-            <SiSqlite className="text-7xl text-blue-600" title="Sqlite" />
-            <SiDocker className="text-7xl text-blue-500" title="Docker" />
+            <SiHtml5
+              className="text-5xl sm:text-6xl md:text-7xl text-orange-500"
+              title="HTML"
+            />
+            <SiCss3
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
+              title="CSS"
+            />
+            <SiJavascript
+              className="text-5xl sm:text-6xl md:text-7xl text-yellow-500"
+              title="Javascript"
+            />
+            <SiTailwindcss
+              className="text-5xl sm:text-6xl md:text-7xl text-cyan-500"
+              title="Tailwind"
+            />
+            <FaNodeJs
+              className="text-5xl sm:text-6xl md:text-7xl text-green-500"
+              title="NodeJs"
+            />
+            <SiExpress
+              className="text-5xl sm:text-6xl md:text-7xl text-green-500"
+              title="Express"
+            />
+            <FaGolang
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-500"
+              title="Golang"
+            />
+            <RiReactjsLine
+              className="text-5xl sm:text-6xl md:text-7xl text-cyan-400"
+              title="React"
+            />
+            <SiMongodb
+              className="text-5xl sm:text-6xl md:text-7xl text-green-400"
+              title="MongoDb"
+            />
+            <SiSqlite
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
+              title="Sqlite"
+            />
+            <SiDocker
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-500"
+              title="Docker"
+            />
           </motion.div>
         </div>
 
@@ -72,12 +105,20 @@ const TechStack = () => {
             transition={{ duration: 1.5 }}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
-            <FaPython className="text-7xl text-blue-500" title="Python" />
-            <img src={qt} alt="PyQt" title="PyQt" className="w-1/4"/>
-            <img src={javafx} alt="JavaFX" title="JavaFX" className="w-1/2" />
+            <FaPython
+              className="text-5xl sm:text-6xl md:text-7xl  text-blue-500"
+              title="Python"
+            />
+            <img src={qt} alt="PyQt" title="PyQt" className="w-1/5 h-1/5 sm:" />
+            <img
+              src={javafx}
+              alt="JavaFX"
+              title="JavaFX"
+              className="w-1/3 h-1/3"
+            />
             <img
               src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg"
-              className="text-7xl"
+              className="text-5xl sm:text-6xl md:text-7xl "
               alt="C#"
               title="C#"
               width={70}
@@ -99,8 +140,14 @@ const TechStack = () => {
             transition={{ duration: 1.5 }}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
-            <SiDart className="text-7xl text-blue-500" title="Dart" />
-            <SiFlutter className="text-7xl text-blue-400" title="Flutter" />
+            <SiDart
+              className="text-5xl sm:text-6xl md:text-7xl  text-blue-500"
+              title="Dart"
+            />
+            <SiFlutter
+              className="text-5xl sm:text-6xl md:text-7xl  text-blue-400"
+              title="Flutter"
+            />
           </motion.div>
         </div>
       </div>

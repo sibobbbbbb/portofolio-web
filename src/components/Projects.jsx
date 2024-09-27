@@ -19,7 +19,7 @@ const contentVariants = {
 
 const Projects = () => {
   return (
-    <div className="p-28">
+    <div className="p-1 lg:p-28">
       <h2 className="my-20 text-center text-4xl">Projects</h2>
 
       <Swiper
@@ -37,7 +37,7 @@ const Projects = () => {
           <SwiperSlide key={index}>
             <div className="mb-8 flex flex-wrap lg:justify-center">
               <motion.div
-                className="w-full lg:w-1/4"
+                className="w-full text-center items-center lg:w-1/4"
                 initial="hidden"
                 whileInView="visible"
                 variants={imageVariants}
@@ -45,7 +45,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded mb-6"
+                  className="rounded mb-6 mx-auto"
                   width={270}
                   height={270}
                 />
@@ -57,20 +57,22 @@ const Projects = () => {
                 whileInView="visible"
                 variants={contentVariants}
               >
-                <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>
-                <p className="text-justify text-stone-400 mb-4">
+                <h3 className="text-center mb-2 font-semibold text-2xl lg:text-left">{project.title}</h3>
+                <p className="text-justify sm: text-stone-400 mb-4">
                   {project.description}
                 </p>
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="bg-white font-bold text-stone-900 rounded-full px-2 py-1 text-sm mr-2"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                <div className="flex flex-wrap justify-center lg:justify-start">
+                  {project.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-white font-bold text-stone-900 rounded-full px-2 py-1 text-sm mr-2 mb-2"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-                <div className="pt-4">
+                <div className="pt-4 flex justify-center lg:flex-none lg:justify-start">
                   <a
                     href={project.github}
                     target="_blank"

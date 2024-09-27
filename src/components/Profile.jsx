@@ -40,9 +40,8 @@ const Profile = () => {
             <motion.img
               src={profilePict}
               alt="Farhan Raditya Aji"
-              className="border border-stone-900 rounded-3xl"
+              className="border border-stone-900 rounded-3xl w-72 lg:w-96"
               width={370}
-              height={370}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -56,13 +55,13 @@ const Profile = () => {
           animate="visible"
           variants={containerVariants}
           >
-            <motion.h2 variants={childVariants} className="pb-2 text-4xl tracking-tighter lg:text:8xl">
+            <motion.h2 variants={childVariants} className="pb-2 text-3xl tracking-tighter lg:text:8xl">
               Hi, I'm
             </motion.h2>
-            <motion.span variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent ">
+            <motion.span variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl">
               Farhan Raditya Aji
             </motion.span>
-            <motion.p variants={childVariants} className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-justify">
+            <motion.p variants={childVariants} className="my-2 max-w-lg py-6 text-lg leading-relaxed tracking-tighter text-justify lg:text-xl">
               {HERO_CONTENT}
             </motion.p>
             <motion.a
