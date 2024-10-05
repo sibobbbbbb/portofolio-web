@@ -66,7 +66,7 @@ const Profile = () => {
             </motion.p>
             <motion.a
               variants={childVariants}
-              href="/src/assets/Resume.pdf"
+              href="/Resume.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"
