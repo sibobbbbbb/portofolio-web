@@ -40,7 +40,7 @@ const Profile = () => {
             <motion.img
               src={profilePict}
               alt="Farhan Raditya Aji"
-              className="border border-stone-900 rounded-3xl w-72 lg:w-96"
+              className="border border-stone-900 rounded-3xl w-52 lg:w-96"
               width={370}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -48,7 +48,7 @@ const Profile = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 lg:pl-10 lg:pt-12">
           <motion.div 
           className="flex flex-col items-center lg:items-start mt-10"
           initial="hidden"
@@ -66,7 +66,7 @@ const Profile = () => {
             </motion.p>
             <motion.a
               variants={childVariants}
-              href="/Resume.pdf"
+              href="/Curriculum Vitae.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"

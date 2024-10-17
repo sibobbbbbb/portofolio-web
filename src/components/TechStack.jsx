@@ -24,8 +24,9 @@ const TechStack = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
+        viewport={{once: true}}
         className="my-20 text-center text-4xl"
-      >
+        >
         Tech Stack
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,6 +43,7 @@ const TechStack = () => {
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1.5 }}
             className="flex justify-center flex-wrap gap-4 mt-6"
+            viewport={{once: true}}
           >
             <SiHtml5
               className="text-5xl sm:text-6xl md:text-7xl text-orange-500"
@@ -103,6 +105,7 @@ const TechStack = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 1.5 }}
+            viewport={{once: true}}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
             <FaPython
@@ -138,6 +141,7 @@ const TechStack = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
+            viewport={{once: true}}
             className="flex justify-center flex-wrap gap-4 mt-6"
           >
             <SiDart
