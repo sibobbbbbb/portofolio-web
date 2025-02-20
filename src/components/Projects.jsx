@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaGithub } from "react-icons/fa";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -17,7 +18,38 @@ const contentVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } },
 };
 
+const ImageModal = ({ src, alt, onClose }) => {
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <div className="relative" onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 bg-white text-black text-2xl rounded-full px-2"
+        >
+          &times;
+        </button>
+        <img src={src} alt={alt} className="max-w-[90vw] max-h-[90vh] rounded-lg" />
+      </div>
+    </div>
+  );
+};
+
 const Projects = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="p-1 lg:p-28">
       <h2 className="my-20 text-center text-4xl">Projects</h2>
@@ -25,7 +57,7 @@ const Projects = () => {
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
-        navigation
+        navigation={!isMobile} // Navigasi hanya muncul di layar besar
         autoplay={{
           delay: 15000,
           disableOnInteraction: false,
@@ -45,9 +77,10 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded mb-6 mx-auto"
+                  className="rounded mb-6 mx-auto cursor-pointer"
                   width={270}
                   height={270}
+                  onClick={() => setSelectedImage(project.image)}
                 />
               </motion.div>
 
@@ -57,8 +90,10 @@ const Projects = () => {
                 whileInView="visible"
                 variants={contentVariants}
               >
-                <h3 className="text-center mb-2 font-semibold text-2xl lg:text-left">{project.title}</h3>
-                <p className="text-justify sm: text-stone-400 mb-4">
+                <h3 className="text-center mb-2 font-semibold text-2xl lg:text-left">
+                  {project.title}
+                </h3>
+                <p className="text-justify text-stone-400 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start">
@@ -89,6 +124,14 @@ const Projects = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {selectedImage && (
+        <ImageModal
+          src={selectedImage}
+          alt="Project Image"
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </div>
   );
 };

@@ -5,8 +5,11 @@ import project4 from "../assets/projects/Password.png";
 import project6 from "../assets/projects/Farm.png";
 import project7 from "../assets/projects/WikiPaddy.png";
 import project8 from "../assets/projects/Resmi.png";
+import linkInPurryImage from "../assets/projects/link-in-purry.png";
+import mDBMSImage from "../assets/projects/mDBMS.png";
+import diagonalMagicCubeSolverImage from "../assets/projects/diagonal-magic-cube-solver.png";
 
-export const HERO_CONTENT = `I am an active student in the Informatics Engineering program at Institut Teknologi Bandung (ITB), class of 2022, currently in my fifth semester. I have a deep interest in software and mobile development and continually strive to enhance my skills in these areas through various academic and non-academic activities. Besides actively participating in technology competitions, I am also involved in several organizations and communities that support my career development and expertise.`;
+export const HERO_CONTENT = `I am an active student in the Informatics Engineering program at Institut Teknologi Bandung (ITB. I have a deep interest in software and mobile development and continually strive to enhance my skills in these areas through various academic and non-academic activities. Besides actively participating in technology competitions, I am also involved in several organizations and communities that support my career development and expertise.`;
 
 export const PROJECTS = [
   {
@@ -16,6 +19,30 @@ export const PROJECTS = [
       "Ergo Mobile is a mobile application that designed to help users manage task lists for various projects. With Ergo Mobile, users can easily create, organize, and track the progress of tasks that need to be completed. The application allows users to set deadlines, add notes, and prioritize tasks based on urgency or importance. Thus, Ergo Mobile becomes a very useful tool for individuals to manage their time and projects more efficiently.",
     technologies: ["Dart", "Flutter"],
     github: "https://github.com/sibobbbbbb/ergo_mobile",
+  },
+  {
+    title: "LinkInPurry",
+    image: linkInPurryImage,
+    description:
+      "A career-focused social media platform built with Node.js and React.js. It features real-time chat, JWT authentication, user connections, and post feeds. Notifications are handled using Service Workers and Server-Sent Events.",
+    technologies: ["Node.js", "React.js", "PostgreSQL", "JWT"],
+    github: "https://github.com/sibobbbbbb/if-3310-2024-2-k03-06",
+  },
+  {
+    title: "miniDBMS",
+    image: mDBMSImage,
+    description:
+      "A mini database management system that includes Query Processor, Concurrency Control Manager, Query Optimizer, Storage Manager, and Failure Recovery Manager. Each component plays a role in executing, optimizing, storing, managing, and recovering data.",
+    technologies: ["Python"],
+    github: "https://github.com/sibobbbbbb/miniDBMS",
+  },
+  {
+    title: "Diagonal Magic Cube Solver",
+    image: diagonalMagicCubeSolverImage,
+    description:
+      "A web-based application that solves the Diagonal Magic Cube problem using local search algorithms like Hill-Climbing, Simulated Annealing, and Genetic Algorithm.",
+    technologies: ["Next.js", "Flask", "Python"],
+    github: "https://github.com/sibobbbbbb/tubes-1-inteligensi-artifisial",
   },
   {
     title: "Notes App",
