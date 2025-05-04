@@ -24,18 +24,18 @@ export const PROJECTS = [
     github: "https://github.com/GDGoC-ITB/GDGoC-ITB",
   },
   {
-    "title": "Aplikasi Purrytify",
-    "image": project10,
-    "description": "An Android music streaming application developed. Features include user authentication (Login/Logout) with JWT token management, display of recently played and new songs on the Home screen, a Library with 'All Songs' and 'Liked Songs', a full-featured music Player with navigation and progress control, and a Mini Player. Users can add songs from external storage, with metadata extraction and storage in a Room Database, and edit/delete added songs. The Profile page displays user data and song statistics. Includes a background service for JWT expiration check and network sensing to handle offline states.",
-    "technologies": ["Android", "Kotlin/Java", "RecyclerView", "Room Database", "Retrofit/OkHttp", "JWT"],
-    "github": "https://github.com/sibobbbbbb/Purritify",
+    title: "Purrytify",
+    image: project10,
+    description: "An Android music streaming application developed. Features include user authentication (Login/Logout) with JWT token management, display of recently played and new songs on the Home screen, a Library with 'All Songs' and 'Liked Songs', a full-featured music Player with navigation and progress control, and a Mini Player. Users can add songs from external storage, with metadata extraction and storage in a Room Database, and edit/delete added songs. The Profile page displays user data and song statistics. Includes a background service for JWT expiration check and network sensing to handle offline states.",
+    technologies: ["Android", "Kotlin/Java", "RecyclerView", "Room Database", "Retrofit/OkHttp", "JWT"],
+    github: "https://github.com/sibobbbbbb/Purritify",
   },
   {
-    "title": "BEAST Community Platform",
-    "image": project11,
-    "description": "A web application designed to digitalize the membership and administrative processes for the Bandung Tennis Enthusiast (BEAST) community. Key features include a comprehensive member database for administrators (with CRUD, filtering, searching, and export capabilities), event management (viewing, details, joining, liking), user profiles (viewing, editing, changing password), a system for trainers to manage schedules and record member progress notes, and a section for articles/news. The platform supports different user roles (Admin, Trainer, Member, Visitor) with appropriate routing and includes features like login, image uploads to cloud storage, and CI/CD integration.",
-    "technologies": ["Node.js", "Express.js", "Docker", "Gitlab CI/CD", "PostgreSQL", "Prisma ORM"],
-    "github": "https://github.com/sibobbbbbb/beast-academy"
+    title: "BEAST Community Platform",
+    image: project11,
+    description: "A web application designed to digitalize the membership and administrative processes for the Bandung Tennis Enthusiast (BEAST) community. Key features include a comprehensive member database for administrators (with CRUD, filtering, searching, and export capabilities), event management (viewing, details, joining, liking), user profiles (viewing, editing, changing password), a system for trainers to manage schedules and record member progress notes, and a section for articles/news. The platform supports different user roles (Admin, Trainer, Member, Visitor) with appropriate routing and includes features like login, image uploads to cloud storage, and CI/CD integration.",
+    technologies: ["Node.js", "Express.js", "Docker", "Gitlab CI/CD", "PostgreSQL", "Prisma ORM"],
+    github: "https://github.com/sibobbbbbb/beast-academy"
   },
   {
     title: "Ergo Mobile",
@@ -48,24 +48,21 @@ export const PROJECTS = [
   {
     title: "LinkInPurry",
     image: linkInPurryImage,
-    description:
-      "A career-focused social media platform built with Node.js and React.js. It features real-time chat, JWT authentication, user connections, and post feeds. Notifications are handled using Service Workers and Server-Sent Events.",
+    description: "A career-focused social media Single Page Application (SPA) built with React for the frontend and a Node.js/Express/PostgreSQL backend. Implements secure JWT authentication via cookies, user profiles with connection management and search, a dynamic post feed (CRUD operations, infinite scroll), real-time private chat using WebSocket, and push notifications for updates via Service Workers/SSE. Includes Docker-based stress testing, responsive design across devices, and detailed API documentation.",
     technologies: ["Node.js", "React.js", "PostgreSQL", "JWT"],
     github: "https://github.com/sibobbbbbb/if-3310-2024-2-k03-06",
   },
   {
     title: "miniDBMS",
     image: mDBMSImage,
-    description:
-      "A mini database management system that includes Query Processor, Concurrency Control Manager, Query Optimizer, Storage Manager, and Failure Recovery Manager. Each component plays a role in executing, optimizing, storing, managing, and recovering data.",
+    description: "A mini Database Management System (mDBMS) for relational databases, comprising five core components: Query Processor (executes queries, interacts with storage and concurrency control), Concurrency Control Manager (manages transactions, concurrency, locks, timestamps, deadlock prevention), Query Optimizer (parses, validates, and optimizes queries), Storage Manager (handles data storage, retrieval, modification, indexes, and statistics on disk), and Failure Recovery Manager (manages logging and recovery from transaction aborts using a write-ahead log). These components work together to process, manage, and protect data.",
     technologies: ["Python"],
     github: "https://github.com/sibobbbbbb/miniDBMS",
   },
   {
     title: "Diagonal Magic Cube Solver",
     image: diagonalMagicCubeSolverImage,
-    description:
-      "A web-based application that solves the Diagonal Magic Cube problem using local search algorithms like Hill-Climbing, Simulated Annealing, and Genetic Algorithm.",
+    description: "A Web application,that focusing on implementing local search algorithms to solve the Diagonal Magic Cube problem (specifically 5x5x5). The project involves implementing three local search algorithms: a Hill-Climbing variant, Simulated Annealing, and Genetic Algorithm. The goal is to arrange numbers 1 to n³ in a cube such that the sum of numbers in all rows, columns, pillars, space diagonals, and plane diagonals equals a magic number. The primary operation is swapping numbers. The application conducts experiments comparing the performance (objective function value, duration, convergence, consistency) of these algorithms and visualizes the initial/final states of the cube and the experimental results.",
     technologies: ["Next.js", "Flask", "Python"],
     github: "https://github.com/sibobbbbbb/tubes-1-inteligensi-artifisial",
   },
