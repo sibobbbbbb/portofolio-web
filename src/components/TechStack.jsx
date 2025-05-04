@@ -1,4 +1,4 @@
-import { FaJava, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaJava, FaNodeJs, FaPhp, FaPython, FaVuejs } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import {
   SiMongodb,
@@ -11,6 +11,9 @@ import {
   SiDart,
   SiTailwindcss,
   SiExpress,
+  SiPostgresql,
+  SiTypescript,
+  SiKotlin,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { FaGolang } from "react-icons/fa6";
@@ -36,7 +39,7 @@ const TechStack = () => {
             Web Development
           </h3>
           <p className="my-4 text-center text-gray-500">
-            The technology used to build frontend and backend websites.
+            The technology used to build a web applications.
           </p>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +50,7 @@ const TechStack = () => {
           >
             <SiHtml5
               className="text-5xl sm:text-6xl md:text-7xl text-orange-500"
-              title="HTML"
+              title="HTML5"
             />
             <SiCss3
               className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
@@ -56,6 +59,10 @@ const TechStack = () => {
             <SiJavascript
               className="text-5xl sm:text-6xl md:text-7xl text-yellow-500"
               title="Javascript"
+            />
+            <SiTypescript
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
+              title="Typescript"
             />
             <SiTailwindcss
               className="text-5xl sm:text-6xl md:text-7xl text-cyan-500"
@@ -69,6 +76,10 @@ const TechStack = () => {
               className="text-5xl sm:text-6xl md:text-7xl text-green-500"
               title="Express"
             />
+            <FaPhp
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
+              title="PHP"
+            />
             <FaGolang
               className="text-5xl sm:text-6xl md:text-7xl text-blue-500"
               title="Golang"
@@ -77,6 +88,10 @@ const TechStack = () => {
               className="text-5xl sm:text-6xl md:text-7xl text-cyan-400"
               title="React"
             />
+            <FaVuejs
+              className="text-5xl sm:text-6xl md:text-7xl text-green-400"
+              title="Vue"
+            />
             <SiMongodb
               className="text-5xl sm:text-6xl md:text-7xl text-green-400"
               title="MongoDb"
@@ -84,6 +99,10 @@ const TechStack = () => {
             <SiSqlite
               className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
               title="Sqlite"
+            />
+            <SiPostgresql
+              className="text-5xl sm:text-6xl md:text-7xl text-blue-600"
+              title="PostgreSQL"
             />
             <SiDocker
               className="text-5xl sm:text-6xl md:text-7xl text-blue-500"
@@ -151,6 +170,10 @@ const TechStack = () => {
             <SiFlutter
               className="text-5xl sm:text-6xl md:text-7xl  text-blue-400"
               title="Flutter"
+            />
+            <SiKotlin
+              className="text-5xl sm:text-6xl md:text-7xl  text-blue-500"
+              title="Kotlin"
             />
           </motion.div>
         </div>
