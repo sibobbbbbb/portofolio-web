@@ -77,9 +77,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded mb-6 mx-auto cursor-pointer"
-                  width={270}
-                  height={270}
+                  className="rounded pr-7 mb-6 mx-auto cursor-pointer w-[400px] h-[280px] object-contain"
                   onClick={() => setSelectedImage(project.image)}
                 />
               </motion.div>
