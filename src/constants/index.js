@@ -5,13 +5,38 @@ import project4 from "../assets/projects/Password.png";
 import project6 from "../assets/projects/Farm.png";
 import project7 from "../assets/projects/WikiPaddy.png";
 import project8 from "../assets/projects/Resmi.png";
+import project9 from "../assets/projects/GDGOC.png";
+import project10 from "../assets/projects/purrytify.png";
+import project11 from "../assets/projects/Beast.png";
 import linkInPurryImage from "../assets/projects/link-in-purry.png";
 import mDBMSImage from "../assets/projects/mDBMS.png";
 import diagonalMagicCubeSolverImage from "../assets/projects/diagonal-magic-cube-solver.png";
 
-export const HERO_CONTENT = `I am an active student in the Informatics Engineering program at Institut Teknologi Bandung (ITB. I have a deep interest in software and mobile development and continually strive to enhance my skills in these areas through various academic and non-academic activities. Besides actively participating in technology competitions, I am also involved in several organizations and communities that support my career development and expertise.`;
+export const HERO_CONTENT = `I am an active third-year student in the Informatics Engineering program at Bandung Institute of Technology (ITB). I have a deep interest in web and mobile development and continually strive to enhance my skills in these areas through various academic and non-academic activities. Besides actively participating in technology competitions, I am also involved in several organizations and communities that support my career development and expertise.`;
 
 export const PROJECTS = [
+  {
+    title: "LMS GDGOC ITB",
+    image: project9,
+    description:
+      "A website-based Learning Management System (LMS) designed for GDGOC ITB 2025 to provide an interactive, progressive, and fun learning experience. The platform allows users (Members, Buddies, and Guests) to follow roadmap-based courses, complete problem sets, browse and RSVP to professional and community events, track their progress via a personal dashboard, and receive certificates. It features differentiated access levels and supports various user roles including Curriculum Admin, Professional Development Admin, and Technical Admin for managing content and events.",
+    technologies: ["Node.js", "Express.js","React.js", "PostgreSQL", "JWT"], 
+    github: "https://github.com/GDGoC-ITB/GDGoC-ITB",
+  },
+  {
+    "title": "Aplikasi Purrytify",
+    "image": project10,
+    "description": "An Android music streaming application developed. Features include user authentication (Login/Logout) with JWT token management, display of recently played and new songs on the Home screen, a Library with 'All Songs' and 'Liked Songs', a full-featured music Player with navigation and progress control, and a Mini Player. Users can add songs from external storage, with metadata extraction and storage in a Room Database, and edit/delete added songs. The Profile page displays user data and song statistics. Includes a background service for JWT expiration check and network sensing to handle offline states.",
+    "technologies": ["Android", "Kotlin/Java", "RecyclerView", "Room Database", "Retrofit/OkHttp", "JWT"],
+    "github": "https://github.com/sibobbbbbb/Purritify",
+  },
+  {
+    "title": "BEAST Community Platform",
+    "image": project11,
+    "description": "A web application designed to digitalize the membership and administrative processes for the Bandung Tennis Enthusiast (BEAST) community. Key features include a comprehensive member database for administrators (with CRUD, filtering, searching, and export capabilities), event management (viewing, details, joining, liking), user profiles (viewing, editing, changing password), a system for trainers to manage schedules and record member progress notes, and a section for articles/news. The platform supports different user roles (Admin, Trainer, Member, Visitor) with appropriate routing and includes features like login, image uploads to cloud storage, and CI/CD integration.",
+    "technologies": ["Node.js", "Express.js", "Docker", "Gitlab CI/CD", "PostgreSQL", "Prisma ORM"],
+    "github": "https://github.com/sibobbbbbb/beast-academy"
+  },
   {
     title: "Ergo Mobile",
     image: project1,
@@ -64,7 +89,7 @@ export const PROJECTS = [
     title: "Password Game",
     image: project4,
     description:
-      "Password Game is an interactive web application where players must create passwords that meet certain rules. In this game there are 20 rules that must be met by players in order to win this game. There are several conditions that can make this player lose. Players can get a total score that is obtained when the player has lost or won.",
+      "The Password Game is a web-based game that challenges players to create passwords following complex rules using string matching algorithms like regex, KMP, or Boyer-Moore. The game features scoring, difficulty levels, and additional functionalities such as save/load, leaderboard, and multiplayer mode.",
     technologies: ["Node.js", " React.js", "Tailwind CSS", "SQLite", "Docker"],
     github: "https://github.com/sibobbbbbb/Password_Game",
   },
