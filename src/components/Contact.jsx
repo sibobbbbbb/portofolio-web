@@ -1,14 +1,14 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const form = useRef(); // Tambahkan useRef untuk form
+  const form = useRef();
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
     message: "",
   });
-  const [messageSent, setMessageSent] = useState(false); // Untuk status pengiriman pesan
+  const [messageSent, setMessageSent] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center items-center py-14 ">
-      <div className="w-full max-w-4xl rounded-lg shadow-lg p-8 lg:p-12 text-stone border">
+      <div className="w-full max-w-3xl rounded-lg shadow-lg p-8 lg:p-12 text-stone border">
         <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
 
         <form ref={form} onSubmit={handleSubmit} className="space-y-6">
@@ -50,9 +50,9 @@ const Contact = () => {
               type="text"
               id="from_name"
               name="from_name"
-              value={formData.from_name} // Perbaikan sesuai dengan template EmailJS
+              value={formData.from_name}
               onChange={handleInputChange}
-              className="w-full p-4 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="text-sm w-full p-2 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="What's your name?"
               required
             />
@@ -65,9 +65,9 @@ const Contact = () => {
               type="email"
               id="from_email"
               name="from_email"
-              value={formData.from_email} // Perbaikan sesuai dengan template EmailJS
+              value={formData.from_email}
               onChange={handleInputChange}
-              className="w-full p-4 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="text-sm w-full p-2 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="What's your email?"
               required
             />
@@ -79,9 +79,9 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              value={formData.message} // Perbaikan sesuai dengan template EmailJS
+              value={formData.message}
               onChange={handleInputChange}
-              className="w-full p-4 h-40 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="text-sm w-full p-2 h-40 rounded-lg bg-slate-50 text-black border border-stone-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="What do you want to say?"
               required
             ></textarea>
@@ -89,7 +89,7 @@ const Contact = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-white text-black font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out hover:bg-slate-600 hover:text-white"
+              className="bg-white text-black font-bold py-2 px-8 rounded-lg transition duration-300 ease-in-out hover:bg-slate-600 hover:text-white"
             >
               Send
             </button>
