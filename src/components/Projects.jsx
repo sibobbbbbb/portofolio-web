@@ -39,25 +39,15 @@ const ImageModal = ({ src, alt, onClose }) => {
 
 const Projects = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
-    <div className="p-1 lg:p-28">
+    <div className="p-4 md:p-8 lg:p-28">
       <h2 className="my-20 text-center text-4xl">Projects</h2>
 
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
-        navigation={!isMobile} // Navigasi hanya muncul di layar besar
+        navigation={false}
         autoplay={{
           delay: 15000,
           disableOnInteraction: false,
@@ -67,9 +57,10 @@ const Projects = () => {
       >
         {PROJECTS.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="mb-8 flex flex-wrap lg:justify-center">
+            <div className="mb-8 flex flex-col lg:flex-row lg:justify-center lg:items-start">
+              {/* Image Section */}
               <motion.div
-                className="w-full text-center items-center lg:w-1/4"
+                className="w-full flex justify-center lg:w-1/4 lg:justify-start"
                 initial="hidden"
                 whileInView="visible"
                 variants={imageVariants}
@@ -77,41 +68,44 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded pr-7 mb-6 mx-auto cursor-pointer w-[400px] h-[280px] object-contain"
+                  className="rounded mb-6 lg:pr-7 cursor-pointer w-full max-w-[400px] h-[280px] object-contain"
                   onClick={() => setSelectedImage(project.image)}
                 />
               </motion.div>
 
+              {/* Content Section */}
               <motion.div
-                className="w-full max-w-xl lg:w-3/4"
+                className="w-full max-w-2xl mx-auto lg:mx-0 lg:w-3/4"
                 initial="hidden"
                 whileInView="visible"
                 variants={contentVariants}
               >
-                <h3 className="text-center mb-2 font-semibold text-2xl lg:text-left">
+                <h3 className="text-center mb-4 font-semibold text-2xl lg:text-left">
                   {project.title}
                 </h3>
-                <p className="text-justify text-stone-400 mb-4">
+                <p className="text-justify text-stone-400 mb-6 px-4 md:px-0">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap justify-center lg:justify-start">
+                
+                {/* Technologies */}
+                <div className="flex flex-wrap justify-center lg:justify-start mb-6 px-4 md:px-0">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-white font-bold text-stone-900 rounded-full px-2 py-1 text-sm mr-2 mb-2"
+                      className="bg-white font-bold text-stone-900 rounded-full px-3 py-1 text-sm mr-2 mb-2"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="pt-4 flex justify-center lg:flex-none lg:justify-start">
+                {/* GitHub Button */}
+                <div className="flex justify-center lg:justify-start px-4 md:px-0">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold rounded-full px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600 hover:shadow-lg"
-                    style={{ width: "fit-content" }}
+                    className="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold rounded-full px-6 py-3 text-sm transition-all duration-300 hover:bg-gray-600 hover:shadow-lg"
                   >
                     <FaGithub className="mr-2" />
                     View on Github
