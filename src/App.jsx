@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <div className="overflow-x-hidden text-stone-300 antialiased">
+    <div className="overflow-x-hidden text-stone-300 antialiased scrollbar-hide">
       <div className="fixed inset-0 -z-10">
         <div className="relative h-full w-full bg-slate-950">
           <div className="relative h-full w-full bg-black">
