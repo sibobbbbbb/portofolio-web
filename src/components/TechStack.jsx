@@ -77,6 +77,13 @@ const TechStack = () => {
               className="text-4xl sm:text-5xl md:text-6xl text-green-400"
               title="Vue"
             />
+            <img
+              src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg"
+              className="text-4xl sm:text-5xl md:text-6xl"
+              alt="Vite"
+              title="Vite"
+              width={48}
+            />
           </motion.div>
         </div>
 
