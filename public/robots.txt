@@ -1,0 +1,14 @@
+<!-- public/robots.txt -->
+User-agent: *
+Allow: /
+Sitemap: https://farhanra.me/sitemap.xml
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

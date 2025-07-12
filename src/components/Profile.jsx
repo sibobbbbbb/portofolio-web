@@ -39,9 +39,11 @@ const Profile = () => {
           <div className="flex justify-center lg:p-8 ">
             <motion.img
               src={profilePict}
-              alt="Farhan Raditya Aji"
+              alt="Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB, Web Developer dan Mobile Developer"
               className="border border-stone-900 rounded-3xl w-52 lg:w-96"
               width={370}
+              height={370}
+              loading="eager"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -50,20 +52,34 @@ const Profile = () => {
         </div>
         <div className="w-full lg:w-1/2 lg:pl-10 lg:pt-12">
           <motion.div 
-          className="flex flex-col items-center lg:items-start mt-10"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
+            className="flex flex-col items-center lg:items-start mt-10"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
           >
             <motion.h2 variants={childVariants} className="pb-2 text-3xl tracking-tighter lg:text:8xl">
               Hi, I'm
             </motion.h2>
-            <motion.h1 variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl">
+            <motion.h1 
+              variants={childVariants} 
+              className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl"
+            >
               Farhan Raditya Aji
             </motion.h1>
-            <motion.p variants={childVariants} className="my-2 max-w-lg py-6 text-lg leading-relaxed tracking-tighter text-justify lg:text-xl">
+            
+            <div className="sr-only">
+              <h2>Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB</h2>
+              <h3>Web Developer | Mobile Developer | Software Engineer</h3>
+              <p>Portfolio resmi Farhan Raditya Aji, mahasiswa aktif Teknik Informatika Institut Teknologi Bandung (ITB) dengan keahlian dalam web development, mobile development, dan software engineering.</p>
+            </div>
+            
+            <motion.p 
+              variants={childVariants} 
+              className="my-2 max-w-lg py-6 text-lg leading-relaxed tracking-tighter text-justify lg:text-xl"
+            >
               {HERO_CONTENT}
             </motion.p>
+            
             <motion.a
               variants={childVariants}
               href="/CV-Farhan-Raditya-Aji.pdf"
@@ -71,6 +87,7 @@ const Profile = () => {
               rel="noopener noreferrer"
               target="_blank"
               className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-slate-600 hover:text-white"
+              aria-label="Download CV Farhan Raditya Aji"
             >
               <b>Download Resume</b>
             </motion.a>
