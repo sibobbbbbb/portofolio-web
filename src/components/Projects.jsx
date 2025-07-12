@@ -67,7 +67,7 @@ const Projects = () => {
               >
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot proyek ${project.title} by Farhan Raditya Aji`}
                   className="rounded mb-6 lg:pr-7 cursor-pointer w-full max-w-[400px] h-[280px] object-contain"
                   onClick={() => setSelectedImage(project.image)}
                 />

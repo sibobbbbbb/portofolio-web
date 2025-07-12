@@ -58,15 +58,15 @@ const Profile = () => {
             <motion.h2 variants={childVariants} className="pb-2 text-3xl tracking-tighter lg:text:8xl">
               Hi, I'm
             </motion.h2>
-            <motion.span variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl">
+            <motion.h1 variants={childVariants} className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl">
               Farhan Raditya Aji
-            </motion.span>
+            </motion.h1>
             <motion.p variants={childVariants} className="my-2 max-w-lg py-6 text-lg leading-relaxed tracking-tighter text-justify lg:text-xl">
               {HERO_CONTENT}
             </motion.p>
             <motion.a
               variants={childVariants}
-              href="/Curriculum Vitae.pdf"
+              href="/CV-Farhan-Raditya-Aji.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"
