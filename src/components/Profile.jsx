@@ -39,7 +39,7 @@ const Profile = () => {
           <div className="flex justify-center lg:p-8 ">
             <motion.img
               src={profilePict}
-              alt="Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB, Web Developer dan Mobile Developer"
+              alt="Foto profil Farhan Raditya Aji dengan latar belakang pantai saat senja."
               className="border border-stone-900 rounded-3xl w-52 lg:w-96"
               width={370}
               height={370}
@@ -66,6 +66,13 @@ const Profile = () => {
             >
               Farhan Raditya Aji
             </motion.h1>
+
+            <motion.h2
+              variants={childVariants}
+              className="mt-2 text-xl tracking-tight lg:text-2xl"
+            >
+              Web & Mobile Developer
+            </motion.h2>
             
             <div className="sr-only">
               <h2>Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB</h2>
