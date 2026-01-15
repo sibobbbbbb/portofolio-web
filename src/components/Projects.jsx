@@ -1,129 +1,227 @@
-import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FaGithub } from "react-icons/fa";
-import { Navigation, Autoplay } from "swiper/modules";
-import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
-import { PROJECTS } from "../constants";
-
-const imageVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const contentVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } },
-};
-
-const ImageModal = ({ src, alt, onClose }) => {
-  return (
-    <div
-      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-      onClick={onClose}
-    >
-      <div className="relative" onClick={(e) => e.stopPropagation()}>
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-2 bg-white text-black text-2xl rounded-full px-2"
-        >
-          &times;
-        </button>
-        <img src={src} alt={alt} className="max-w-[90vw] max-h-[90vh] rounded-lg" />
-      </div>
-    </div>
-  );
-};
+import { useState } from "react";
+import { PROJECTS, CATEGORIES } from "../constants";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaTimes } from "react-icons/fa";
 
 const Projects = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [activeTab, setActiveTab] = useState("All");
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const filteredProjects =
+    activeTab === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.category === activeTab);
 
   return (
-    <div className="p-4 md:p-8 lg:p-28">
-      <h2 className="my-20 text-center text-4xl">Projects</h2>
-
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation={false}
-        autoplay={{
-          delay: 15000,
-          disableOnInteraction: false,
-        }}
-        loop
-        modules={[Navigation, Autoplay]}
+    <div className="pb-20">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 text-center text-4xl font-bold text-neutral-200"
       >
-        {PROJECTS.map((project, index) => (
-          <SwiperSlide key={index}>
-            <div className="mb-8 flex flex-col lg:flex-row lg:justify-center lg:items-start">
-              {/* Image Section */}
-              <motion.div
-                className="w-full flex justify-center lg:w-1/4 lg:justify-start"
-                initial="hidden"
-                whileInView="visible"
-                variants={imageVariants}
-              >
-                <img
-                  src={project.image}
-                  alt={project.alt}
-                  className="rounded mb-6 lg:pr-7 cursor-pointer w-full max-w-[400px] h-[280px] object-contain"
-                  onClick={() => setSelectedImage(project.image)}
-                />
-              </motion.div>
+        Projects
+      </motion.h2>
 
-              {/* Content Section */}
-              <motion.div
-                className="w-full max-w-2xl mx-auto lg:mx-0 lg:w-3/4"
-                initial="hidden"
-                whileInView="visible"
-                variants={contentVariants}
-              >
-                <h3 className="text-center mb-4 font-semibold text-2xl lg:text-left">
-                  {project.title}
-                </h3>
-                <p className="text-justify text-stone-400 mb-6 px-4 md:px-0">
-                  {project.description}
-                </p>
-                
-                {/* Technologies */}
-                <div className="flex flex-wrap justify-center lg:justify-start mb-6 px-4 md:px-0">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="bg-white font-bold text-stone-900 rounded-full px-3 py-1 text-sm mr-2 mb-2"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* GitHub Button */}
-                <div className="flex justify-center lg:justify-start px-4 md:px-0">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold rounded-full px-6 py-3 text-sm transition-all duration-300 hover:bg-gray-600 hover:shadow-lg"
-                  >
-                    <FaGithub className="mr-2" />
-                    View on Github
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </SwiperSlide>
+      {/* FILTER */}
+      <div className="flex flex-wrap justify-center gap-3 mb-8 px-4">
+        {CATEGORIES.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveTab(category)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+              activeTab === category
+                ? "bg-neutral-200 text-neutral-900 border-neutral-200 shadow-[0_0_15px_rgba(255,255,255,0.3)] scale-105"
+                : "bg-neutral-900 text-neutral-400 border-neutral-800 hover:border-neutral-600 hover:text-neutral-200"
+            }`}
+          >
+            {category}
+          </button>
         ))}
-      </Swiper>
+      </div>
 
-      {selectedImage && (
-        <ImageModal
-          src={selectedImage}
-          alt="Project Image"
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
+      {/* GRID */}
+      <div className="container mx-auto px-4 lg:px-12">
+        <style>{`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: #171717;
+            border-radius: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #404040;
+            border-radius: 20px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: #525252;
+          }
+          .custom-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: #404040 #171717;
+          }
+        `}</style>
+
+        <div className="max-h-[800px] overflow-y-auto custom-scrollbar p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project) => (
+                <motion.div
+                  key={project.title}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => setSelectedProject(project)}
+                  className="group relative bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500 transition-colors duration-300 flex flex-col cursor-pointer"
+                >
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.alt || project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-neutral-200 text-sm font-medium border border-neutral-500 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm">
+                        Click for Details
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="mb-3">
+                      <span className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest border border-neutral-700/50 bg-neutral-800/50 px-2 py-1 rounded">
+                        {project.category}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-neutral-200 mb-3 transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-neutral-400 text-sm mb-4 flex-grow line-clamp-3 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-neutral-800/50">
+                      {project.technologies.slice(0, 4).map((tech, i) => (
+                        <span
+                          key={i}
+                          className="text-xs font-medium text-neutral-400 bg-neutral-800 px-2 py-1 rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 4 && (
+                        <span className="text-xs font-medium text-neutral-500 px-1 py-1">
+                          +{project.technologies.length - 4}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {selectedProject && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+            {/* BACKDROP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setSelectedProject(null)}
+              className="absolute inset-0 bg-neutral-950/90"
+            />
+
+            {/* MODAL CONTENT */}
+            <motion.div
+              layoutId={`modal-${selectedProject.title}`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto custom-scrollbar bg-neutral-900 border border-neutral-700 rounded-2xl shadow-2xl flex flex-col will-change-transform"
+            >
+              {/* CLOSE BUTTON */}
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 z-10 p-2 bg-black/50 text-neutral-400 hover:text-white rounded-full transition-colors border border-neutral-700/50"
+              >
+                <FaTimes size={20} />
+              </button>
+
+              {/* IMAGE */}
+              <div className="w-full h-64 sm:h-80 relative flex-shrink-0 bg-neutral-800">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
+              </div>
+
+              {/* DETAIL */}
+              <div className="p-6 sm:p-8 space-y-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xs font-bold text-neutral-300 uppercase tracking-widest border border-neutral-700 bg-neutral-800 px-3 py-1 rounded-full">
+                      {selectedProject.category}
+                    </span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-white mb-2">
+                    {selectedProject.title}
+                  </h2>
+                </div>
+
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-neutral-300 text-base leading-relaxed whitespace-pre-line text-justify">
+                    {selectedProject.description}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-3">
+                    Technologies Used
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-sm font-medium text-neutral-300 bg-neutral-800 border border-neutral-700 px-3 py-1.5 rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {selectedProject.github && (
+                  <div className="pt-6 border-t border-neutral-800 flex gap-4">
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-neutral-900 rounded-full font-bold hover:bg-white hover:scale-105 transition-all"
+                    >
+                      <FaGithub size={20} /> View Source Code
+                    </a>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -50,43 +50,43 @@ const Profile = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:pl-10 lg:pt-12">
-          <motion.div 
+        <div className="w-full lg:w-1/2 lg:pl-10 lg:pt-16">
+          <motion.div
             className="flex flex-col items-center lg:items-start mt-10"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
           >
-            <motion.h2 variants={childVariants} className="pb-2 text-3xl tracking-tighter lg:text:8xl">
+            <motion.h2
+              variants={childVariants}
+              className="pb-2 text-3xl tracking-tighter lg:text:8xl"
+            >
               Hi, I'm
             </motion.h2>
-            <motion.h1 
-              variants={childVariants} 
+            <motion.h1
+              variants={childVariants}
               className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl"
             >
               Farhan Raditya Aji
             </motion.h1>
 
-            <motion.h2
-              variants={childVariants}
-              className="mt-2 text-xl tracking-tight lg:text-2xl"
-            >
-              Web & Mobile Developer
-            </motion.h2>
-            
             <div className="sr-only">
               <h2>Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB</h2>
               <h3>Web Developer | Mobile Developer | Software Engineer</h3>
-              <p>Portfolio resmi Farhan Raditya Aji, mahasiswa aktif Teknik Informatika Institut Teknologi Bandung (ITB) dengan keahlian dalam web development, mobile development, dan software engineering.</p>
+              <p>
+                Portfolio Farhan Raditya Aji, mahasiswa Teknik Informatika
+                Institut Teknologi Bandung (ITB) dengan keahlian dalam web
+                development, mobile development, dan software engineering.
+              </p>
             </div>
-            
-            <motion.p 
-              variants={childVariants} 
+
+            <motion.p
+              variants={childVariants}
               className="my-2 max-w-lg py-6 text-lg leading-relaxed tracking-tighter text-justify lg:text-xl"
             >
               {HERO_CONTENT}
             </motion.p>
-            
+
             <motion.a
               variants={childVariants}
               href="/CV-Farhan-Raditya-Aji.pdf"

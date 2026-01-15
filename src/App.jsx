@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
-import TechStack from "./components/TechStack";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -20,11 +21,14 @@ export default function App() {
         <section id="profile">
           <Profile />
         </section>
-        <section id="techstack" className="pt-10">
-          <TechStack />
+        <section id="experience">
+          <Experience />
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="techstack" className="pt-10">
+          <TechStack />
         </section>
         <section id="contact">
           <Contact />
