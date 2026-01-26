@@ -90,13 +90,12 @@ const Profile = () => {
             <motion.a
               variants={childVariants}
               href="/CV-Farhan-Raditya-Aji.pdf"
-              download
               rel="noopener noreferrer"
               target="_blank"
               className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-slate-600 hover:text-white"
-              aria-label="Download CV Farhan Raditya Aji"
+              aria-label="View CV Farhan Raditya Aji"
             >
-              <b>Download Resume</b>
+              <b>View Resume</b>
             </motion.a>
           </motion.div>
         </div>
