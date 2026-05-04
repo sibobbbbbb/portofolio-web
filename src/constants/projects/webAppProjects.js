@@ -10,6 +10,7 @@ import uiDireblo from "../../assets/projects/Direblo.png";
 import uiGDGoC from "../../assets/projects/GDGOC.png";
 import uiCitizenSystem from "../../assets/projects/Citizen.png";
 import uiSecureChat from "../../assets/projects/SecureChat.png";
+import uiRyokan from "../../assets/projects/Ryokan.svg";
 
 export const WEB_APP_PROJECTS = [
   {
@@ -55,6 +56,25 @@ export const WEB_APP_PROJECTS = [
       "Docker",
     ],
     github: "https://github.com/sibobbbbbb/beast-academy",
+  },
+  {
+    title: "RYOKAN — AI Risk Accountability System",
+    category: "Web App",
+    image: uiRyokan,
+    alt: "Tampilan antarmuka RYOKAN, AI pre-trade accountability system untuk crypto futures trading",
+    description:
+      "An AI-powered pre-trade accountability system for cryptocurrency futures traders. RYOKAN introduces deliberate friction before trade execution through a 3-step flow: live market structure analysis (EMA 9/21/50/200 + S/R zone clustering from Binance data), AI-powered thesis evaluation via LLM that hard-blocks weak entries, and a mathematically rigorous risk matrix with 3-tier position sizing, liquidation price calculation, and R:R ratio. The AI agent character Ryokan Tetsu evaluates trade theses against real market data using chain-of-thought reasoning — and will refuse to proceed if the thesis is structurally unsound.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "OpenRouter (gpt-oss-120b)",
+      "Binance API",
+      "Framer Motion",
+      "Zustand",
+      "lightweight-charts",
+    ],
+    github: "https://github.com/sibobbbbbb/ryokan",
   },
   {
     title: "BlockTicket DApp",
