@@ -61,7 +61,7 @@ const Profile = () => {
               variants={childVariants}
               className="pb-2 text-3xl tracking-tighter lg:text:8xl"
             >
-              Hi, I'm
+              Hi, I&apos;m
             </motion.h2>
             <motion.h1
               variants={childVariants}

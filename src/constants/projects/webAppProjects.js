@@ -1,3 +1,4 @@
+import uiChatbotITB from "../../assets/projects/chatbot-itb.png";
 import uiAher from "../../assets/projects/AHER.png";
 import uiBeast from "../../assets/projects/Beast.png";
 import uiLinkinpurry from "../../assets/projects/link-in-purry.png";
@@ -13,6 +14,27 @@ import uiSecureChat from "../../assets/projects/SecureChat.png";
 import uiRyokan from "../../assets/projects/Ryokan.svg";
 
 export const WEB_APP_PROJECTS = [
+  {
+    title: "ITB Academic Chatbot with RAG",
+    category: "Web App",
+    image: uiChatbotITB,
+    alt: "ITB academic chatbot interface showing an answer with a document source panel",
+    description:
+      "A Retrieval-Augmented Generation question-answering system for ITB academic documents, built with two core guarantees: data consistency across PostgreSQL and ChromaDB via orchestrated Saga Pattern transactions, and information accountability per response via a Contextual Snapshot mechanism grounded in W3C PROV-DM. Verified across 26 scenarios including programmatic fault injection, achieving a SUS score of 86.9 (Excellent) and 92.5% task completion rate. Deployed at chat.six.itb.ac.id.",
+    technologies: [
+      "FastAPI",
+      "React 19",
+      "TypeScript",
+      "PostgreSQL",
+      "ChromaDB",
+      "Docker",
+      "Saga Pattern",
+      "SSE",
+      "W3C PROV-DM",
+    ],
+    github: "",
+    link: "https://chat.six.itb.ac.id",
+  },
   {
     title: "Project Management Module (AHER)",
     category: "Web App",

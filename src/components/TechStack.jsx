@@ -3,7 +3,6 @@ import {
   FaNodeJs,
   FaPython,
   FaVuejs,
-  FaEthereum,
 } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import {
@@ -20,18 +19,14 @@ import {
   SiKotlin,
   SiSpringboot,
   SiNextdotjs,
-  SiSolidity,
   SiRabbitmq,
   SiNginx,
   SiBootstrap,
-  SiGnubash,
   SiApachekafka,
   SiKubernetes,
   SiPrometheus,
   SiGrafana,
   SiMinio,
-  SiPandas,
-  SiScikitlearn,
   SiFlask,
   SiGo,
 } from "react-icons/si";

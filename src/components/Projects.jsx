@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PROJECTS, CATEGORIES } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaTimes } from "react-icons/fa";
+import { FaGithub, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -206,16 +206,28 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {selectedProject.github && (
-                  <div className="pt-6 border-t border-neutral-800 flex gap-4">
-                    <a
-                      href={selectedProject.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-neutral-900 rounded-full font-bold hover:bg-white hover:scale-105 transition-all"
-                    >
-                      <FaGithub size={20} /> View Source Code
-                    </a>
+                {(selectedProject.github || selectedProject.link) && (
+                  <div className="pt-6 border-t border-neutral-800 flex flex-wrap gap-4">
+                    {selectedProject.github && (
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 bg-neutral-200 text-neutral-900 rounded-full font-bold hover:bg-white hover:scale-105 transition-all"
+                      >
+                        <FaGithub size={20} /> View Source Code
+                      </a>
+                    )}
+                    {selectedProject.link && (
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 bg-neutral-800 text-neutral-200 border border-neutral-700 rounded-full font-bold hover:bg-neutral-700 hover:scale-105 transition-all"
+                      >
+                        <FaExternalLinkAlt size={18} /> Visit Website
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
