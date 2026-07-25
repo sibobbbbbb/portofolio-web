@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
+import { EMAILJS_CONFIG } from "../constants";
 
 const Contact = () => {
   const form = useRef();
@@ -19,10 +20,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_91aj0lh", // ID Service
-        "template_8685xju", // ID Template
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
         form.current,
-        "PjYr1LHCuT0G0NV0g" // User ID
+        EMAILJS_CONFIG.userId
       )
       .then(
         (result) => {

@@ -75,7 +75,13 @@ const Projects = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  onClick={() => setSelectedProject(project)}
+                  onClick={() => {
+                    if (project.link) {
+                      window.open(project.link, "_blank", "noopener,noreferrer");
+                    } else {
+                      setSelectedProject(project);
+                    }
+                  }}
                   className="group relative bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500 transition-colors duration-300 flex flex-col cursor-pointer"
                 >
                   <div className="relative h-48 w-full overflow-hidden">
@@ -86,7 +92,7 @@ const Projects = () => {
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="text-neutral-200 text-sm font-medium border border-neutral-500 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm">
-                        Click for Details
+                        {project.link ? "Visit Website" : "Click for Details"}
                       </span>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import { SOCIAL_LINKS } from "../constants";
 
 const Navbar = () => {
   return (
@@ -12,30 +12,17 @@ const Navbar = () => {
 
       {/* Social Media Icons */}
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-        <a
-          href="https://www.linkedin.com/in/farhan-raditya-aji/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="http://www.github.com/sibobbbbbb/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Github"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="http://www.instagram.com/farhan.raditya29"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
+        {SOCIAL_LINKS.map(({ Icon, href, label }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+          >
+            <Icon />
+          </a>
+        ))}
       </div>
     </nav>
   );

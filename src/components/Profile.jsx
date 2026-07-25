@@ -1,5 +1,4 @@
-import profilePict from "../assets/profile.jpg";
-import { HERO_CONTENT } from "../constants";
+import { HERO_CONTENT, PROFILE } from "../constants";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -38,8 +37,8 @@ const Profile = () => {
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:p-8 ">
             <motion.img
-              src={profilePict}
-              alt="Foto profil Farhan Raditya Aji dengan latar belakang pantai saat senja."
+              src={PROFILE.image}
+              alt={PROFILE.imageAlt}
               className="border border-stone-900 rounded-3xl w-52 lg:w-96"
               width={370}
               height={370}
@@ -61,23 +60,19 @@ const Profile = () => {
               variants={childVariants}
               className="pb-2 text-3xl tracking-tighter lg:text:8xl"
             >
-              Hi, I&apos;m
+              {PROFILE.greeting}
             </motion.h2>
             <motion.h1
               variants={childVariants}
               className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl"
             >
-              Farhan Raditya Aji
+              {PROFILE.name}
             </motion.h1>
 
             <div className="sr-only">
-              <h2>Farhan Raditya Aji - Mahasiswa Teknik Informatika ITB</h2>
-              <h3>Web Developer | Mobile Developer | Software Engineer</h3>
-              <p>
-                Portfolio Farhan Raditya Aji, mahasiswa Teknik Informatika
-                Institut Teknologi Bandung (ITB) dengan keahlian dalam web
-                development, mobile development, dan software engineering.
-              </p>
+              <h2>{PROFILE.seo.name}</h2>
+              <h3>{PROFILE.seo.title}</h3>
+              <p>{PROFILE.seo.description}</p>
             </div>
 
             <motion.p
@@ -89,13 +84,13 @@ const Profile = () => {
 
             <motion.a
               variants={childVariants}
-              href="/CV-Farhan-Raditya-Aji.pdf"
+              href={PROFILE.cvLink}
               rel="noopener noreferrer"
               target="_blank"
               className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-slate-600 hover:text-white"
-              aria-label="View CV Farhan Raditya Aji"
+              aria-label={`View CV ${PROFILE.name}`}
             >
-              <b>View Resume</b>
+              <b>{PROFILE.cvLabel}</b>
             </motion.a>
           </motion.div>
         </div>
