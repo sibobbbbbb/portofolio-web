@@ -16,4 +16,4 @@ export const PROFILE = {
   },
 };
 
-export const HERO_CONTENT = `Final-year Informatics Engineering student at Institut Teknologi Bandung (ITB) specializing in Software Engineering. Experienced in developing scalable backend systems and full-stack applications using Java (Spring Boot), Go, and Node.js. Proven track record in delivering enterprise solutions through professional internship and complex academic projects. Passionate about cloud infrastructure, microservices, and blockchain technology.`;
+export const HERO_CONTENT = `Recent Informatics Engineering graduate from Institut Teknologi Bandung (ITB) specializing in Software Engineering. Experienced in architecting scalable backend systems and full-stack applications utilizing Java (Spring Boot), Go, and Node.js. Possesses a proven track record of delivering enterprise-grade solutions across multiple professional internships and complex engineering projects. Adept at problem-solving with a strong passion for cloud infrastructure, microservices architecture, and distributed systems.`;

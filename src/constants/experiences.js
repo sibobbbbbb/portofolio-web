@@ -1,6 +1,12 @@
 export const EXPERIENCES = [
   {
     role: "Software Engineer Intern",
+    company: "PT Toyota Motor Manufacturing Indonesia (TMMIN)",
+    period: "August 2026 - Present",
+    description: "Engineered a comprehensive 'Supplier Problem' tracking system for the Engine Production Karawang Division using Power Platform. Designed and implemented an interactive Quality Management System (QMS) Dashboard to visualize real-time production quality metrics and supplier performance.",
+  },
+  {
+    role: "Software Engineer Intern",
     company: "PT. Akhdani Reka Solusi",
     period: "June 2025 - September 2025",
     description: "Designed and engineered the Project Management Module for the company's internal HR Super-App. Collaborated closely with Senior Engineers and UI/UX designers to migrate legacy manual processes into a centralized digital system using Java Spring Boot and PostgreSQL.",
