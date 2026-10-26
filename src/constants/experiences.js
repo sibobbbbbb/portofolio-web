@@ -3,7 +3,7 @@ export const EXPERIENCES = [
     role: "Software Engineer Intern",
     company: "PT Toyota Motor Manufacturing Indonesia (TMMIN)",
     period: "August 2026 - Present",
-    description: "Engineered a comprehensive 'Supplier Problem' tracking system for the Engine Production Karawang Division using Power Platform. Designed and implemented an interactive Quality Management System (QMS) Dashboard to visualize real-time production quality metrics and supplier performance.",
+    description: "Engineered a “Supplier Problem” system for the Engine Production Karawang Division using Power Apps, Power Automate, and SharePoint, replacing a manual, undocumented process with one digital workflow, now in trial with 16 users and live supplier correspondence. Developed and adapted 9 Power Automate workflows with Office Scripts to automate problem sheet generation, supplier emails, reply tracking, and reminders, and to sync every case to a KRW recap that lets PUD Purchasing rank suppliers by problem frequency. Designed a QMS Dashboard (Vue 3, TypeScript, Hono, PostgreSQL, Docker) to replace redundant manual logging across 8 QC data sources and 3 disconnected systems, with an interactive mockup for stakeholder review. Authored a Toyota Business Practices proposal for a record-once, auto-recap QC workflow, projecting steps per item job to drop from 19 to 14 and manual write-ups from 10 to zero.",
   },
   {
     role: "Software Engineer Intern",
